@@ -1,6 +1,6 @@
-output "vpc_id" {
-  value = aws_vpc.main.id
-}
+# output "vpc_id" {
+#   value = aws_vpc.main.id
+# }
 # output "azs" {
 #   value = data.aws_availability_zones.available.names
 # }
@@ -15,4 +15,16 @@ output "private_rt" {
 
 output "database_rt" {
   value = aws_route_table.database.id
+}
+
+output "vpc_id" {
+    value = module.vpc.vpc_id
+}
+
+# output "azs" {
+#     value = data.aws_availability_zones.available
+# }
+
+output "public_subnet_ids" {
+    value = module.vpc.public_subnet_ids
 }
